@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgb(0 0 0 / 0.12);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      margin-top: 0;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    p.description {
+      margin-top: 0;
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 15px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    .two-columns {
+      display: flex;
+      gap: 15px;
+    }
+    .two-columns > div {
+      flex: 1;
+    }
+    .membership-type,
+    .interests {
+      margin-top: 10px;
+    }
+    .membership-type label,
+    .interests label {
+      font-weight: normal;
+      margin-right: 15px;
+      font-size: 14px;
+    }
+    .interests label {
+      display: inline-block;
+      width: 48%;
+      margin-bottom: 8px;
+    }
+    textarea {
+      resize: vertical;
+      height: 70px;
+    }
+    .terms {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .terms input {
+      margin-right: 8px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Membership Registration Form</h2>
+    <p class="description">Please fill out the form below to become a member.</p>
+    
+    <form>
+      <div class="two-columns">
+        <div>
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Enter your first name" required />
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Enter your last name" required />
+        </div>
+      </div>
+
+      <div class="two-columns">
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email address" required />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" />
+        </div>
+      </div>
+
+      <label for="address1">Address Line 1</label>
+      <input type="text" id="address1" placeholder="Enter your address line 1" />
+
+      <label for="address2">Address Line 2</label>
+      <input type="text" id="address2" placeholder="Enter your address line 2" />
+
+      <label for="country">Country</label>
+      <select id="country">
+        <option>United States of America</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+        <option>Australia</option>
+        <option>Other</option>
+      </select>
+
+      <label>Membership Type</label>
+      <div class="membership-type">
+        <label><input type="radio" name="membership" value="basic" /> Basic</label>
+        <label><input type="radio" name="membership" value="premium" /> Premium</label>
+        <label><input type="radio" name="membership" value="elite" /> Elite</label>
+      </div>
+
+      <h3>Interests</h3>
+      <label>Favorite Sports</label>
+      <div class="interests">
+        <label><input type="checkbox" name="sports" value="football" /> Football</label>
+        <label><input type="checkbox" name="sports" value="basketball" /> Basketball</label>
+        <label><input type="checkbox" name="sports" value="baseball" /> Baseball</label>
+        <label><input type="checkbox" name="sports" value="hockey" /> Hockey</label>
+        <label><input type="checkbox" name="sports" value="soccer" /> Soccer</label>
+        <label><input type="checkbox" name="sports" value="other" /> Other</label>
+      </div>
+
+      <label for="reason">Why do you want to become a member?</label>
+      <textarea id="reason" placeholder="Please tell us why you want to join"></textarea>
+
+      <div class="terms">
+        <label><input type="checkbox" required /> I agree to the terms and conditions.</label>
+      </div>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+</body>
+</html>
